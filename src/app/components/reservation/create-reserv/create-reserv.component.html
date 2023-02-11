@@ -1,0 +1,37 @@
+<div class="main">
+  <h2>Creer une Reservation :</h2>
+  <a  routerLink="/reservation/">Revenir à la liste des reservation</a>
+  <form  [formGroup]="reserForm" (ngSubmit)="insert()" >
+      <input type="date" formControlName="Date" placeholder="Entrez la date ">
+      <input type="text" formControlName="Nom" placeholder="Entrez Votre Nom">
+      <input type="text" formControlName="Prenom" placeholder="Entrez Votre Prénom">
+      <input type="text" formControlName="AdressDepart" placeholder="Entrez l'adresse de depart">
+      <input type="text" formControlName="AdressArrivee" placeholder="Entrez l'adresse d'arrive">
+      <input type="number" formControlName="Duree" placeholder="Entrez la durée">
+      <!-- <input type="text" formControlName="IdUser" [value]="" placeholder="Entrez votre iduser"> -->
+      <!-- <input type="text" formControlName="IdMotif" placeholder="Entrez votre idmot"  >
+      <input type="number" formControlName="IdCategorie" placeholder="Entrez votre idcat"  > -->
+
+
+
+      <select formControlName="IdCategorie"  >
+        <option value="">--Please choose your category--</option>
+        <option *ngFor="let item of categories" [value]="item.id" >
+                  {{item.name}}
+        </option>
+
+      </select>
+      <select formControlName="IdMotif"  >
+        <option value="">--Please choose your motif de transport--</option>
+        <option *ngFor="let item of motifs" [value]="item.id">
+                  {{item.name}}
+        </option>
+
+      </select>
+  <input type="submit" value="Créer">
+
+  </form>
+
+</div>
+
+

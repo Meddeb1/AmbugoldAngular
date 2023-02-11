@@ -1,0 +1,67 @@
+.main-register {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register {
+  width: 40%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(93, 20, 93);
+}
+
+.register * {
+  margin : 2% 0;
+}
+
+h2 {
+  color :  rgb(93, 20, 93);
+}
+
+form {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ width: 100%;
+}
+
+input[type="submit"] {
+  background-color: rgb(93, 20, 93);
+  border: 1px solid rgb(93, 20, 93);
+  color : lightpink;
+  cursor: pointer;
+  width: 70%;
+  height: 2em;
+}
+
+input[type="submit"]:hover {
+  background-color: lightpink;
+  color :  rgb(93, 20, 93);
+}
+
+a {
+  color : rgb(93, 20, 93);
+  text-decoration: none;
+}
+
+input {
+  width: 70%;
+  height: 2em;
+
+}
+
+input:focus {
+  outline: 1px solid rgb(93,20,93);
+}
+
+.error {
+  color : darkred;
+  font-size: smaller;
+  margin-top: 0;
+}

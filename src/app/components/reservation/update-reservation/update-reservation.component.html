@@ -1,0 +1,30 @@
+<h2>Modifier une réservation :</h2>
+<a routerLink="/reservation">Revenir à la liste des réservations</a>
+<form [formGroup]="resForm" (ngSubmit)="updateReser()">
+    <!-- <input type="datetime-local" formControlName="Date" placeholder="Date"> -->
+    <input type="text" formControlName="Nom" placeholder="Nom" >
+    <input type="text" formControlName="Prenom" placeholder="Prenom">
+    <input type="text" formControlName="AdressDepart" placeholder="AdresseDepart">
+    <input type="text" formControlName="AdressArrivee" placeholder="Arrivé">
+    <input type="number" formControlName="Duree" placeholder="Duree">
+
+    <select formControlName="IdCategorie"  >
+      <option value="">--Please choose your category--</option>
+      <option *ngFor="let item of categories" [ngValue]="item.id" >
+                {{item.name}}
+
+      </option>
+
+    </select>
+    <select formControlName="IdMotif"  >
+      <option value="">--Please choose your motif de transport--</option>
+      <option *ngFor="let item of motifs" [ngValue]="item.id">
+                {{item.name}}
+      </option>
+
+    </select>
+    <input type="submit" value="Modifier">
+    <div *ngIf="resForm.invalid">
+{{resForm?.value |json }}
+    </div>
+</form>

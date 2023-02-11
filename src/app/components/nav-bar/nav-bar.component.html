@@ -1,0 +1,17 @@
+<nav>
+  <ul>
+      <div class="menu">
+          <li><a routerLink="/home">Accueil</a></li>
+          <li *ngIf="user.id"><a routerLink="/reservation/">reservation</a></li>
+          <li><a routerLink="/emploi/getall">Travailler chez nous</a></li>
+          <li><a routerLink="/categorie/getall">categories</a></li>
+
+      </div>
+      <div class="buttons">
+          <button *ngIf="!user.id"><a routerLink="/login">Se connecter</a></button>
+          <button *ngIf="user.id"><a (click)="logout()">Se déconnecter</a></button>
+      </div>
+  </ul>
+</nav>
+
+

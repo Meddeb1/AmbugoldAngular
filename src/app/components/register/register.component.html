@@ -1,0 +1,46 @@
+<div class="main-register">
+  <div class="register">
+      <h2>Créer un compte</h2>
+      <form [formGroup]="registerForm" (ngSubmit)="Register()">
+
+
+
+          <input type="mail" placeholder="Entrez votre email" formControlName="Email">
+          <span class="error" *ngIf="registerForm.get('email')?.touched && registerForm.get('email')?.errors?.['required']">Le champs est requis</span>
+          <span class="error" *ngIf="registerForm.get('email')?.errors?.['email']">Veuillez entrer un email valide</span>
+
+          <input type="text" placeholder="Entrez votre prénom" formControlName="FirstName">
+          <span class="error" *ngIf="registerForm.get('firstname')?.touched && registerForm.get('firstname')?.errors?.['required']">Le champs est requis</span>
+
+          <input type="text" placeholder="Entrez votre nom" formControlName="LastName">
+          <span class="error" *ngIf="registerForm.get('lastname')?.touched && registerForm.get('lastname')?.errors?.['required']">Le champs est requis</span>
+
+          <input type="date" placeholder="Entrez votre date de naissance" formControlName="BirthDate">
+          <span class="error" *ngIf="registerForm.get('BirthDate')?.touched && registerForm.get('BirthDate')?.errors?.['required']">Le champs est requis</span>
+
+          <input type="text" placeholder="Entrez votre sexe" formControlName="Sexe">
+          <span class="error" *ngIf="registerForm.get('Sexe')?.touched && registerForm.get('Sexe')?.errors?.['required']">Le champs est requis</span>
+
+          <input type="text" placeholder="Entrez votre GSM" formControlName="Phone">
+          <span class="error" *ngIf="registerForm.get('Phone')?.touched && registerForm.get('Phone')?.errors?.['required']">Le champs est requis</span>
+
+          <input type="text" placeholder="Entrez votre adress" formControlName="Adresse">
+          <span class="error" *ngIf="registerForm.get('Adresse')?.touched && registerForm.get('Adresse')?.errors?.['required']">Le champs est requis</span>
+
+          <input type="password" placeholder="Entrez votre mot de passe" formControlName="Password">
+          <span class="error" *ngIf="registerForm.get('password')?.touched && registerForm.get('password')?.errors?.['required']">Le champs est requis</span>
+          <span class="error" *ngIf="registerForm.get('password')?.touched && registerForm.get('password')?.errors?.['pattern']">Votre mot de passe doit contenir au moins une lettre, un chiffre, un caractère spécial et une majuscule</span>
+          <span class="error" *ngIf="registerForm.get('password')?.errors?.['minlength']">Votre mot de passe doit faire au moins 8 caractères</span>
+
+
+          <input type="password" placeholder="Confirmez votre mot de passe" formControlName="ConfirmPassword">
+          <span class="error" *ngIf="registerForm.get('confirmPassword')?.touched && registerForm.get('confirmPassword')?.errors?.['required']">Le champs est requis</span>
+          <span class="error" *ngIf="registerForm.errors?.['notsame']">Le mot de passe n'est pas identique</span>
+
+
+          <input type="submit" value="Créer mon compte">
+      </form>
+      <a routerLink="/login">Déjà un compte ? Cliquez ici pour vous connecter</a>
+  </div>
+</div>
+

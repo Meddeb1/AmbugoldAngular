@@ -1,0 +1,24 @@
+<div class="main">
+  <h2>Liste des réservations</h2>
+
+  <div  *ngFor="let res of reservations ">
+
+      <p>
+        {{res.nom}}
+        {{res.prenom}}
+        {{res.adressArrivee}}
+        {{res.adresseArrivee}}
+
+        </p>
+
+
+      <div class="buttons">
+          <a class="button" routerLink="/reservation/update/{{res.id}}">Modifier ✒</a>
+          <button (click)="delete(res.id)">Supprimer 🗑</button>
+      </div>
+  </div>
+  <a routerLink="/reservation/insert">Ajouter une Reservation</a>
+</div>
+
+
+

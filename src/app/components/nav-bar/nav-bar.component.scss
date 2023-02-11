@@ -1,0 +1,63 @@
+nav {
+  width: 100vw;
+  height: 10vh;
+  background-color: rgb(208, 138, 138);
+
+}
+
+ul {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  height: 10vh;
+  width: 50%;
+  align-items: center;
+  list-style: none;
+}
+
+.buttons {
+  display: flex;
+  margin : 0 2%;
+}
+
+li {
+  margin : 0 2%;
+}
+
+button {
+  padding: 1% 2%;
+  background-color: rgb(93, 20, 93);
+  border: 1px solid rgb(93, 20, 93);
+  color : lightpink;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: lightpink;
+}
+
+button>a {
+  color : lightpink;
+
+}
+
+button:hover > a {
+  color : rgb(93, 20, 93);
+}
+
+a {
+  text-decoration: none;
+}
+
+.menu a {
+  color : rgb(93, 20, 93);
+}
+
+.menu a:hover {
+  color :white;
+}
